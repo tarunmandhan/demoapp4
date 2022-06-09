@@ -1,17 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+const name="tarun's";
+const img1="https://picsum.photos/200/300";
+const img2="https://picsum.photos/255/300";
+const img3="https://picsum.photos/295/300";
+const link1="https://gaana.com/lyrics/moh-moh-ke-dhaage-male"
+ReactDOM.render(
+<> 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+<h1 className="heading" ContentEditable="true"> This is {name} Gallery</h1>
+<div className="allimg" >
+<img src={img1} alt="something wrong" />
+<a href={link1} target="_blank">
+<img src={img2} alt="something wrong" />
+</a>
+<img src={img3} alt="something wrong" /> 
+</div>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+</>
+,document.getElementById('root'));
